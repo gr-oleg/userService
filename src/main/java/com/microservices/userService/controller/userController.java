@@ -49,8 +49,7 @@ public class userController {
         if (existingUser == null) {
             throw new UserNotFoundException(email);
         }
-        existingUser.setUser(newUser.getUser());
-        existingUser.setEmail(newUser.getEmail());
+        existingUser.setPhoneNumber(newUser.getPhoneNumber());
         return userService.saveUser(existingUser);
     }
 

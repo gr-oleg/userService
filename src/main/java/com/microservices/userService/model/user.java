@@ -13,6 +13,7 @@ public class user {
     private String user;
     private String email;
     private String pass;
+    private String phoneNumber;
 
     public user() {
 
@@ -30,8 +31,16 @@ public class user {
         return user;
     }
 
+    public String getPhoneNumber() {
+        return phoneNumber;
+    }
+
     public void setUser(String user) {
         this.user = user;
+    }
+
+    public void setPhoneNumber(String phoneNumber) {
+        this.phoneNumber = phoneNumber;
     }
 
     public String getEmail() {
