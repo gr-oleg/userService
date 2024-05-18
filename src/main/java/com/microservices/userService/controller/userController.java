@@ -9,6 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Optional;
 
 @RestController
 @RequestMapping("/user")
@@ -35,6 +36,11 @@ public class userController {
     @GetMapping("/{email}")
     user getUserByEmail(@PathVariable String email){
         return userService.findByEmail(email);
+    }
+
+    @GetMapping("id/{id}")
+        Optional<user> getUserById(@PathVariable long id){
+        return userService.findById(id);
     }
 
     @PutMapping("/{email}")

@@ -5,6 +5,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class userServiceImpl implements userService {
@@ -26,5 +27,10 @@ public class userServiceImpl implements userService {
     public user findByEmail(String email) {
         return userRepository.findByEmail(email);
     }
+
+    @Override
+    public Optional<user> findById(long id) {
+       return userRepository.findById(id);
+}
 
 }
